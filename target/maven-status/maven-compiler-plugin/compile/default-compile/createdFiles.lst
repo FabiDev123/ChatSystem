@@ -1,2 +1,3 @@
-de\fabidev\chatplugin\listeners\chatlistener.class
 de\fabidev\chatplugin\MAIN.class
+de\fabidev\chatplugin\listeners\chatlistener.class
+de\fabidev\chatplugin\listeners\joinmanager.class

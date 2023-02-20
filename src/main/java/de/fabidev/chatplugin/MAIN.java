@@ -1,6 +1,7 @@
 package de.fabidev.chatplugin;
 
 import de.fabidev.chatplugin.listeners.chatlistener;
+import de.fabidev.chatplugin.listeners.joinmanager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MAIN extends JavaPlugin {
@@ -28,6 +29,7 @@ public class MAIN extends JavaPlugin {
     private void registerListeners(){
         //getServer().getPluginManager().registerEvents(new Listener(), this);
         getServer().getPluginManager().registerEvents(new chatlistener(), this);
+        getServer().getPluginManager().registerEvents(new joinmanager(), this);
     }
 
 
