@@ -1,6 +1,7 @@
 package de.fabidev.chatplugin.listeners;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -14,7 +15,9 @@ public class joinmanager implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onJoin(PlayerJoinEvent e){
-        e.getPlayer().teleport(Bukkit.getWorld("kingdomblockscity").getSpawnLocation());
+        Location loc = Bukkit.getWorld("kingdomblockscity").getSpawnLocation();
+        loc.add(0.5, 0, 0.5);
+        e.getPlayer().teleport(loc);
         e.setJoinMessage(null);
     }
 
@@ -31,7 +34,9 @@ public class joinmanager implements Listener {
 
     @EventHandler (priority = EventPriority.HIGHEST)
     public void onDeath(PlayerDeathEvent e){
-        e.getEntity().teleport(Bukkit.getWorld("kingdomblockscity").getSpawnLocation());
+        Location loc = Bukkit.getWorld("kingdomblockscity").getSpawnLocation();
+        loc.add(0.5, 0, 0.5);
+        e.getEntity().teleport(loc);
         e.setDeathMessage(null);
     }
 

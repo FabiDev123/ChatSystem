@@ -12,7 +12,6 @@ public class MAIN extends JavaPlugin {
         registerCommands();
         registerListeners();
 
-
         System.out.println("Das Plugin " + this.getName() + " wurde erfolgreich gestartet!");
     }
 
